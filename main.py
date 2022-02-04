@@ -15,6 +15,10 @@ def app():
       st.write(pd.DataFrame(result))
     else:
       st.warning("The sentence needs to contains [MASK]")
+    data = {u"Result": result
+        }
+    # Stockage de la données avec le nom comme ID dans notre collection "loansimulation"
+    db.collection("posts").document(sentence).set(data)
 
 
 
