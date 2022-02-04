@@ -20,6 +20,7 @@ def app():
             }
         # Stockage de la données avec le nom comme ID dans notre collection "loansimulation"
         db.collection("posts").document(sentence).set(data)
+        st.success("Congrats, your result is now stored")
 
 
 
